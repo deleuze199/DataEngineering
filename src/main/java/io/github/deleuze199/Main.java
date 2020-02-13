@@ -17,8 +17,12 @@ public class Main {
       JsonReader jread = new JsonReader(new FileReader("src/Data/authors.json"));
       AuthorParser[] authors = gson.fromJson(jread, AuthorParser[].class);
 
+      BookStoreDB db = new BookStoreDB();
+
       for (var element : authors) {
-        System.out.println(element.getName());
+        System.out.print(element.getName()+" | ");
+        System.out.print(element.getEmail()+" | ");
+        System.out.print(element.getUrl()+"\n");
       }
 
     }
