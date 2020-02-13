@@ -48,12 +48,9 @@ public class CsvParser {
   protected void printCsv() {
     for (Object row : fileRows) {
       for (String fields : (String[]) row) {
-        System.out.println(fields + ", ");
+        System.out.print(fields + ", ");
       }
-      System.out.println("\b\b\n----------------------------------");
+      System.out.println("\b\n---------------------------------------------------------------------");
     }
   }
-
-
-
 }
